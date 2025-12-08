@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       image 'chikky712/maven17-agent:v1'
-      args '-u root:root'
+      args '--user root -v /var/run/docker.sock:/var/run/docker.sock'
     }
   }
   stages {
